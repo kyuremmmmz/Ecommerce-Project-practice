@@ -30,22 +30,29 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header className=" bg-slate-950 flex items-center justify-center h-14">
-          <div className=" flex-auto items-center justify-center">
-            <h1 className=" text-center text-white">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</h1>
+          <div className="flex items-center justify-center flex-auto">
+            <h1 className="text-white ml-40">Start Investing Today with 50% OFF Trading Fees!</h1>
+            <h1 className="relative text-white cursor-pointer ml-4 transition-all duration-300 ease-in-out 
+              before:absolute before:bottom-0 before:left-0 before:h-[2px] 
+              before:w-0 before:bg-white before:transition-all before:duration-300 
+              hover:before:w-full">
+              Trade Now
+            </h1>
+
           </div>
-          <div className=" flex ">
-            <p>English</p>
+          <div className="">
+            <p className=" text-white mr-20">English</p>
           </div>
         </header>
         <header className=" flex justify-center items-center  h-32 bg-white ">
-          <h1 className="text-left ml-3">Byte Blossoms</h1>
+          <h1 className="text-left ml-3">Cryptotality</h1>
           <div className="mx-auto">
             <Navbars />
           </div>
         </header>
         {children}
         <footer className=" flex items-center align-middle bg-cyan-950 h-32 justify-center">
-          <p className="text-center text-white">All rights reserved © 2024 Crypto Buy</p>
+          <p className="text-center text-white">All rights reserved © 2024 Cryptotality</p>
         </footer>
       </body>
     </html>
