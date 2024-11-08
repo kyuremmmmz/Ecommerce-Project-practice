@@ -44,10 +44,11 @@ export default function RootLayout({
             <p className=" text-white mr-20">English</p>
           </div>
         </header>
-        <header className=" flex justify-center items-center  h-32 bg-white ">
-          <h1 className="text-left ml-24 font-bold text-3xl">Exclusive</h1>
-          <div className="mx-auto">
-            <Navbars />
+        <header className="flex justify-center items-center sticky top-0 h-32 bg-black bg-opacity-10 transition-all group">
+          <div className=" grid row-auto">
+            <div className="col-start-7 mx-auto">
+              <Navbars />
+            </div>
           </div>
         </header>
         {children}
