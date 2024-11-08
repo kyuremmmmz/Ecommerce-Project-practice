@@ -45,11 +45,7 @@ export default function RootLayout({
           </div>
         </header>
         <header className="flex justify-center items-center sticky top-0 h-32 bg-black bg-opacity-10 transition-all group">
-          <div className=" grid row-auto">
-            <div className="col-start-7 mx-auto">
-              <Navbars />
-            </div>
-          </div>
+          <Navbars />
         </header>
         {children}
         <footer className=" flex items-center align-middle bg-cyan-950 h-32 justify-center">
