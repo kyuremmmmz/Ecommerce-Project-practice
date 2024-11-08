@@ -28,7 +28,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className=" flex items-center justify-center p-2 bg-cyan-950">
+          <h1>Byte Blossoms</h1>
+        </header>
         {children}
+        <footer className=" flex items-center bg-cyan-950 h-32 justify-center">
+          <p className="text-center ">All rights reserve 2024 ByteBlossoms</p>
+        </footer>
       </body>
     </html>
   );
