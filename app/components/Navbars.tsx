@@ -1,0 +1,15 @@
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+export default function Navbars() {
+    const pathname = usePathname();
+  return (
+      <nav>
+          <Link className={pathname === '/' ? " font-bold mr-5" : " text-cyan-400 mr-5"} href={'/'}>Home</Link>
+          <Link className={pathname === '/page/product/2' ? " font-bold mr-5" : " text-cyan-400 mr-5"} href={'/page/product/2'}>Product</Link>
+          <Link className={pathname === '/page/product/puta' ? " font-bold mr-5" : " text-cyan-400 mr-5"} href={'/page/product/puta'}>Puta</Link>
+          <Link className={pathname === '/page/about' ? " font-bold mr-5" : " text-cyan-400 mr-5"} href={'/page/about'}>About</Link>
+     </nav>
+  )
+}

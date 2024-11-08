@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbars from "./components/Navbars";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,12 +29,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className=" flex items-center justify-center p-2 bg-cyan-950">
-          <h1>Byte Blossoms</h1>
+        <header className=" flex justify-center items-center  h-32 bg-cyan-950">
+          <h1 className="text-left ml-3">Byte Blossoms</h1>
+          <div className="mx-auto">
+            <Navbars />
+          </div>
         </header>
         {children}
-        <footer className=" flex items-center bg-cyan-950 h-32 justify-center">
-          <p className="text-center ">All rights reserve 2024 ByteBlossoms</p>
+        <footer className=" flex items-center align-middle bg-cyan-950 h-32 justify-center">
+          <p className="text-center">All rights reserved © 2024 Crypto Buy</p>
         </footer>
       </body>
     </html>
