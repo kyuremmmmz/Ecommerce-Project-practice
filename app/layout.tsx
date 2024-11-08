@@ -29,7 +29,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className=" flex justify-center items-center  h-32 bg-cyan-950">
+        <header className=" bg-slate-950 flex items-center justify-center h-14">
+          <div className=" flex-auto items-center justify-center">
+            <h1 className=" text-center text-white">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</h1>
+          </div>
+          <div className=" flex ">
+            <p>English</p>
+          </div>
+        </header>
+        <header className=" flex justify-center items-center  h-32 bg-white ">
           <h1 className="text-left ml-3">Byte Blossoms</h1>
           <div className="mx-auto">
             <Navbars />
@@ -37,7 +45,7 @@ export default function RootLayout({
         </header>
         {children}
         <footer className=" flex items-center align-middle bg-cyan-950 h-32 justify-center">
-          <p className="text-center">All rights reserved © 2024 Crypto Buy</p>
+          <p className="text-center text-white">All rights reserved © 2024 Crypto Buy</p>
         </footer>
       </body>
     </html>

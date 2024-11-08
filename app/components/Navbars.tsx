@@ -3,13 +3,38 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Navbars() {
-    const pathname = usePathname();
+  const pathname = usePathname();
+
   return (
-      <nav>
-          <Link className={pathname === '/' ? " font-bold mr-5" : " text-cyan-400 mr-5"} href={'/'}>Home</Link>
-          <Link className={pathname === '/page/product/what' ? " font-bold mr-5" : " text-cyan-400 mr-5"} href={'/page/product/what'}>Product</Link>
-          <Link className={pathname === '/page/product/puta' ? " font-bold mr-5" : " text-cyan-400 mr-5 hover:font-bold hover:text-white transition-all"} href={'/page/product/puta'}>Puta</Link>
-          <Link className={pathname === '/page/about' ? " font-bold mr-5" : " text-cyan-400 mr-5"} href={'/page/about'}>About</Link>
-     </nav>
-  )
+    <nav className="flex space-x-5">
+      <Link
+        href="/"
+        className={`${pathname === "/" ? "text-black border-b-2 border-transparent border-black" : "text-gray-500"
+          } pb-1 border-b-2 border-transparent hover:border-black transition-all duration-300`}
+      >
+        Home
+      </Link>
+      <Link
+        href="/page/product/what"
+        className={`${pathname === "/page/product/what" ? "text-black border-b-2 border-transparent border-black" : "text-gray-500"
+          } pb-1 border-b-2 border-transparent hover:border-black transition-all duration-300`}
+      >
+        Contact
+      </Link>
+      <Link
+        href="/page/product/puta"
+        className={`${pathname === "/page/product/puta" ? "text-black border-b-2 border-transparent border-black" : "text-gray-500"
+          } pb-1 border-b-2 border-transparent hover:border-black transition-all duration-300`}
+      >
+        About
+      </Link>
+      <Link
+        href="/page/about"
+        className={`${pathname === "/page/about" ? "text-black border-b-2 border-transparent border-black" : "text-gray-500"
+          } pb-1 border-b-2 border-transparent hover:border-black transition-all duration-300`}
+      >
+        Sign Up
+      </Link>
+    </nav>
+  );
 }
