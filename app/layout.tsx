@@ -45,7 +45,7 @@ export default function RootLayout({
           </div>
         </header>
         <header className=" flex justify-center items-center  h-32 bg-white ">
-          <h1 className="text-left ml-3 font-bold text-3xl">Cryptotality</h1>
+          <h1 className="text-left ml-24 font-bold text-3xl">Exclusive</h1>
           <div className="mx-auto">
             <Navbars />
           </div>
