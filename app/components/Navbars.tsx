@@ -1,12 +1,14 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FaHeart, FaSearch } from "react-icons/fa";
+import Search from "./ui/Fields/Search";
 
 
 export default function Navbars() {
   const pathname = usePathname();
   return (
-    <nav className="grid grid-cols-6 items-center gap-10">
+    <nav className="grid grid-cols-7 items-center gap-10">
       <div className="col-span-1 ml-30">
         <h1 className="font-bold text-3xl text-right">Exclusive</h1>
       </div>
@@ -62,22 +64,11 @@ export default function Navbars() {
           Sign Up
         </Link>
       </div>
-      <div className=" col-span-1 flex justify-end">
-        <input className="
-        col-span-4 justify-center space-x-10
-        placeholder:italic
-        placeholder:text-slate-400 block
-        bg-white w-full border
-        border-slate-300 rounded-3xl
-        py-2 pl-9 pr-3 shadow-sm
-        focus:outline-none focus:ring-0 focus:border-cyan-200
-        transition: border-color 
-        border-color: hover:border-cyan-300
-        transition-shadow
-        duration: 0.3s ease-in-out"
-          placeholder="What are you looking for?"
-          type="text"
-          name="search" />
+      <div className=" grid grid-cols-7 items-center gap-10">
+        <div className=" col-span-2">
+          <Search />
+        </div>
+
       </div>
     </nav>
   );
