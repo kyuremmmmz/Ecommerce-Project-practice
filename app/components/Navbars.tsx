@@ -2,15 +2,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+
 export default function Navbars() {
   const pathname = usePathname();
-
   return (
-    <nav className="grid grid-cols-5 items-center gap-10">
-      <div className="col-span-1 mr-24">
+    <nav className="grid grid-cols-6 items-center gap-10">
+      <div className="col-span-2 mr-24">
         <h1 className="font-bold text-3xl text-right">Exclusive</h1>
       </div>
-      <div className="col-span-1 flex justify-center space-x-10">
+      <div className="col-span-2 flex justify-center space-x-10">
         <Link
           href="/"
           className={`${pathname === "/" ? "text-black" : "text-gray-500"
@@ -52,7 +52,7 @@ export default function Navbars() {
           Sign Up
         </Link>
       </div>
-      <div className=" ">
+      <div className=" col-span-1 flex justify-end">
         <input className="
         col-span-4 justify-center space-x-10
         placeholder:italic
@@ -60,11 +60,11 @@ export default function Navbars() {
         bg-white w-full border
         border-slate-300 rounded-3xl
         py-2 pl-9 pr-3 shadow-sm
-        focus:outline-none
-        focus:border-sky-500
-        focus:ring-sky-500
-        focus:ring-1
-        sm:text-sm"
+        focus:outline-none focus:ring-0 focus:border-cyan-200
+        transition: border-color 
+        border-color: hover:border-cyan-300
+        transition-shadow
+        duration: 0.3s ease-in-out"
           placeholder="What are you looking for?"
           type="text"
           name="search" />
