@@ -1,18 +1,20 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaHeart, FaSearch } from "react-icons/fa";
+import { FaCartArrowDown, FaHeart } from "react-icons/fa";
 import Search from "./ui/Fields/Search";
+import { useRouter } from 'next/navigation'
 
 
 export default function Navbars() {
   const pathname = usePathname();
+  const router = useRouter()
   return (
-    <nav className="grid grid-cols-7 items-center gap-10">
-      <div className="col-span-1 ml-30">
+    <nav className="md:grid md:grid-cols-8 md:gap-10 md:items-center flex flex-col items-center py-4">
+      <div className="md:col-span-1 ml-30">
         <h1 className="font-bold text-3xl text-right">Exclusive</h1>
       </div>
-      <div className="col-span-4 flex justify-center space-x-8">
+      <div className="md:col-span-4 flex justify-center space-x-8">
         <Link
           href="/"
           className={`${pathname === "/" ? " border-b-2 border-black" : "text-gray-500"
@@ -64,11 +66,16 @@ export default function Navbars() {
           Sign Up
         </Link>
       </div>
-      <div className=" grid grid-cols-7 items-center gap-10">
-        <div className=" col-span-2">
+      <div className=" md:grid md:grid-cols-3 flex flex-col  justify-center items-center">
+        <div className="col-span-1">
           <Search />
         </div>
-
+        <div className="col-span-1 md:grid md:grid-cols-2 flex flex-col justify-center gap-10 ml-60">
+          <FaHeart className="lg:flex md:ml-1 text-red-500 text-2xl cursor-pointer" onClick={() => router.push('/page/cart')} />
+          <FaCartArrowDown className="lg:flex md:ml-1 text-red-500 text-2xl cursor-pointer" onClick={() => router.push('/page/tanginamo')} />
+        </div>
+        <div className="col-span-2 ">
+        </div>
       </div>
     </nav>
   );
