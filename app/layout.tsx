@@ -44,7 +44,7 @@ export default function RootLayout({
             <p className=" text-white mr-20">English</p>
           </div>
         </header>
-        <header className="flex justify-center items-center md:sticky md:top-0 h-32 bg-black bg-opacity-10 transition-all group">
+        <header className="flex justify-center items-center md:sticky md:top-0 h-32 bg-black bg-opacity-0 border-b-2 transition-all group">
           <Navbars />
         </header>
         {children}
