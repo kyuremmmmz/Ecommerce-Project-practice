@@ -44,9 +44,13 @@ export default function RootLayout({
             <p className=" text-white mr-20">English</p>
           </div>
         </header>
-        <header className="flex justify-center items-center h-32 bg-black bg-opacity-0 border-b-2 transition-all group">
-          <Navbars />
-        </header>
+        <header className="flex justify-center top-0 sticky items-center h-32 bg-black bg-opacity-0 border-b-2 transition-all group">
+  <div className="absolute inset-0 h-full w-full bg-black bg-opacity-0 blur-sm z-0"></div>
+  <div className="relative z-10">
+    <Navbars />
+  </div>
+</header>
+
         {children}
         <footer className=" flex items-center align-middle bg-cyan-950 h-32 justify-center">
           <p className="text-center text-white">All rights reserved © 2024 Cryptotality</p>
