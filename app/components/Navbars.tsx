@@ -75,7 +75,7 @@ export default function Navbars() {
           </div>
           <div className="col-span-1 md:grid md:grid-cols-4 flex flex-col justify-center gap-10 ml-72">
             <FaHeart className="lg:flex md:ml-1 text-red-500 text-2xl cursor-pointer" onClick={() => router.push('/page/cart')} />
-            <FaCartArrowDown className="lg:flex md:ml-1 text-red-500 text-2xl cursor-pointer" onClick={() => router.push('/page/tanginamo')} />
+            <FaCartArrowDown className="lg:flex md:ml-1 text-red-500 text-2xl cursor-pointer" onClick={() => router.push('/page/blog')} />
             {
               (sign === true ?
                 (<button className=" md:ml-2  text-white bg-black opacity-45 hover:bg-black hover:opacity-100 hover:text-white transition-all duration-300 w-20 rounded cursor-pointe"
