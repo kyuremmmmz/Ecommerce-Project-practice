@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
 import Navbars from "./components/Navbars";
 import ProductLists from "./components/ui/List/ProductLists";
+import "./globals.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -51,9 +51,7 @@ export default function RootLayout({
             <Navbars />
           </div>
         </header>
-        <aside className="group sticky top-32 left-0 w-12 hover:w-52 transition-all duration-300 border-x-2 px-2 overflow-hidden py-5">
           <ProductLists />
-        </aside>
         {children}
         <footer className=" flex items-center align-middle bg-cyan-950 h-32 justify-center">
           <p className="text-center text-white">All rights reserved © 2024 Cryptotality</p>
