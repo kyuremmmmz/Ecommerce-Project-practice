@@ -51,7 +51,7 @@ export default function RootLayout({
             <Navbars />
           </div>
         </header>
-        <aside className=" sticky top-0 left-0 w-20 hover:w-52 transition-all duration-300 border-x-2 px-2 overflow-hidden py-5">
+        <aside className="group sticky top-32 left-0 w-12 hover:w-52 transition-all duration-300 border-x-2 px-2 overflow-hidden py-5">
           <ProductLists />
         </aside>
         {children}
