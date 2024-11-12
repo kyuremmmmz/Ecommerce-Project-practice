@@ -58,7 +58,7 @@ function Promos() {
                     <CarouselPrevious className='ml-14' />
                     <CarouselNext className='mr-14' />
                 </Carousel>
-    );
-}
+            );
+        }
 
 export default Promos;
