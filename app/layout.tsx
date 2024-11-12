@@ -45,7 +45,7 @@ export default function RootLayout({
             <p className=" text-white mr-20">English</p>
           </div>
         </header>
-        <header className="flex justify-center top-0 sticky overflow-hidden items-center h-32 bg-black bg-opacity-0 border-b-2 transition-all group">
+        <header className="flex justify-center top-0 sticky items-center h-32 bg-black bg-opacity-0 border-b-2 transition-all overflow-hidden">
           <div className="absolute inset-0 h-full w-full bg-black bg-opacity-0 blur-sm z-0"></div>
           <div className="relative z-10">
             <Navbars />
