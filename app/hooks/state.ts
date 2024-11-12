@@ -29,8 +29,7 @@ const useFetchProducts = () => {
 
                 const fetchedData = await response.json();
                 console.log(fetchedData);
-                
-                    setData(fetchedData.products);
+                setData(fetchedData.products);
                 
             } catch (err) {
                 const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
