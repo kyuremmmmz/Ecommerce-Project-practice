@@ -1,4 +1,4 @@
-import Promos from "./components/ui/Promo/Promos";
+import  Promos  from "./components/ui/Promo/Promos";
 
 export default function Home() {
   return (
