@@ -45,13 +45,13 @@ export default function RootLayout({
             <p className=" text-white mr-20">English</p>
           </div>
         </header>
-        <header className="flex justify-center top-0 sticky items-center h-32 bg-black bg-opacity-0 border-b-2 transition-all group">
+        <header className="flex justify-center top-0 sticky overflow-hidden items-center h-32 bg-black bg-opacity-0 border-b-2 transition-all group">
           <div className="absolute inset-0 h-full w-full bg-black bg-opacity-0 blur-sm z-0"></div>
           <div className="relative z-10">
             <Navbars />
           </div>
         </header>
-        <aside className="sticky top-32 w-20  z-10 border-x-2 px-60 py-5">
+        <aside className=" sticky top-0 left-0 w-20 hover:w-52 transition-all duration-300 border-x-2 px-2 overflow-hidden py-5">
           <ProductLists />
         </aside>
         {children}
