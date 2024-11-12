@@ -91,8 +91,6 @@ export default function Navbars() {
             )
           }
         </div>
-        <div className="col-span-2 ">
-        </div>
       </div>
     </nav>
 
