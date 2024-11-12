@@ -1,11 +1,12 @@
 import React from 'react';
 
-export default async function Products({
+export default function Products({
   params,
 }: {
   params: { id: string };
 }) {
-  const { id } = await params;
+  const { id } = params; 
+
   return (
     <div>
       <h1>Product: {id}</h1>
