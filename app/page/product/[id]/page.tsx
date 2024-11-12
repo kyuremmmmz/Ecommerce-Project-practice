@@ -1,6 +1,12 @@
 import React from 'react';
 
-export default function Products({ params }: { params: { id: string } }) {
+type ProductsProps = {
+  params: {
+    id: string;
+  };
+};
+
+export default function Products({ params }: ProductsProps) {
   const { id } = params;
 
   return (
