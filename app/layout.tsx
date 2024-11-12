@@ -51,7 +51,6 @@ export default function RootLayout({
             <Navbars />
           </div>
         </header>
-          <ProductLists />
         {children}
         <footer className=" flex items-center align-middle bg-cyan-950 h-32 justify-center">
           <p className="text-center text-white">All rights reserved © 2024 Cryptotality</p>
