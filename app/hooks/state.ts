@@ -38,7 +38,6 @@ const useFetchProducts = () => {
                 setLoading(false);
             }
         };
-
         fetchData();
     }, []);
 
