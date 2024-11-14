@@ -43,7 +43,7 @@ function Sales() {
                       </div>
                   </div>
               </div>
-              <div className=' flex flex-row gap-6'>
+              <div className="flex flex-col md:flex-row gap-6 items-center md:items-start justify-center md:justify-start">
                   <div className=' w-56 h-40 bg-slate-200'>
                       <Badge variant="destructive" className=' bg-red-500 rounded absolute mt-4 mx-3 hover:bg-red-200 duration-300 cursor-pointer'>40%</Badge>
                   </div>
