@@ -4,8 +4,8 @@ import Sales from "./components/ui/Sales/Sales";
 
 export default function Home() {
   return (
-    <div className="grid h-screen-full p-8  gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <section>
+    <div className="grid p-8 h-screen  gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <section className="border w-fit h-fit mx-auto gap-2">
           <div className="md:flex-row flex flex-col justify-center items-stretch gap-2">
               <Promos />
             <div className=" flex flex-col gap-2">
@@ -14,9 +14,11 @@ export default function Home() {
             </div>
         </div>
       </section>
-      <section className=" ">
+      <section className=" mx-auto gap-2">
         <div className=" flex justify-center">
-          <Sales />
+          <div className="">
+            <Sales />
+          </div>
         </div>
       </section>
     </div>
