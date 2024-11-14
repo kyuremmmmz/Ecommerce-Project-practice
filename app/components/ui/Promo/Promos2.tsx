@@ -6,7 +6,7 @@ import iphone from '../../../../assets/iphone.png';
 import Image from 'next/image';
 import Autoplay from "embla-carousel-autoplay"
 import useFetchProducts from '@/app/hooks/state';
-function Promos() {
+function Promos2() {
     const { data, loading, error } = useFetchProducts();
     return (
         <Carousel
@@ -15,13 +15,13 @@ function Promos() {
                     delay: 3000,
                 }),
             ]}
-            className="flex flex-row justify-center items-center h-96 w-[700px] bg-black overflow-hidden">
-                    <CarouselContent>
-                        {
+            className="flex flex-row justify-center items-center h-[188px] w-[400px] bg-black overflow-hidden">
+            <CarouselContent>
+                {
                     data.map((item) => {
                         return (
                             <CarouselItem key={item._id}>
-                                <Card className='flex justify-center items-center rounded-none h-96 w-[700px]  overflow-hidden'>
+                                <Card className='flex justify-center items-center rounded-none h-[188px] w-[400px]  overflow-hidden'>
                                     <CardContent className="relative flex items-center justify-center h-full w-full overflow-hidden">
                                         <Image
                                             className=' object-fill'
@@ -33,13 +33,14 @@ function Promos() {
                                     </CardContent>
                                 </Card>
                             </CarouselItem>
-                        )})
-                        }
-                    </CarouselContent>
-                    <CarouselPrevious className='ml-14' />
-                    <CarouselNext className='mr-14' />
-                </Carousel>
-            );
-        }
+                        )
+                    })
+                }
+            </CarouselContent>
+            <CarouselPrevious className='ml-14' />
+            <CarouselNext className='mr-14' />
+        </Carousel>
+    );
+}
 
-export default Promos;
+export default Promos2;
