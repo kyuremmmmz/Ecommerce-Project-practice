@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Autoplay from "embla-carousel-autoplay"
 import useFetchProducts from '@/app/hooks/state';
 function Promos() {
-    const { data, loading, error } = useFetchProducts();
+    const { data } = useFetchProducts();
     return (
         <Carousel
             plugins={[
