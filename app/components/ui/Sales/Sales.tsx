@@ -2,6 +2,26 @@ import { Badge } from '@/components/ui/badge'
 import React from 'react'
 
 function Sales() {
+    const list: unknown[] = [
+        {
+            name: 'Add to Cart'
+        },
+        {
+            name: 'Add to Cart'
+        },
+        {
+            name: 'Add to Cart'
+        },
+        {
+            name: 'Add to Cart'
+        },
+        {
+            name: 'Add to Cart'
+        },
+        {
+            name: 'Add to Cart'
+        },
+    ];
   return (
     <div className=' flex'>
           <div className=' flex flex-col gap-3'>
@@ -44,21 +64,20 @@ function Sales() {
                   </div>
               </div>
               <div className="flex flex-col md:flex-row gap-6 items-center md:items-start justify-center md:justify-start">
-                  <div className="relative w-56 h-40 bg-slate-100 group overflow-hidden">
-                      <Badge variant="destructive" className="bg-red-500 rounded absolute mt-4 mx-3 hover:bg-red-200 duration-300 cursor-pointer text-white">
-                          -40%
-                      </Badge>
-                  </div>
-
-                  <div className=' w-56 h-40 bg-slate-100'>
-                      <Badge variant="destructive" className=' bg-red-500 rounded absolute mt-4 mx-3 hover:bg-red-200 duration-300 cursor-pointer text-white'>-40%</Badge>
-                  </div>
-                  <div className=' w-56 h-40 bg-slate-100'>
-                      <Badge variant="destructive" className=' bg-red-500 rounded absolute mt-4 mx-3 hover:bg-red-200 duration-300 cursor-pointer text-white'>-40%</Badge>
-                  </div>
-                  <div className=' w-56 h-40 bg-slate-100'>
-                      <Badge variant="destructive" className=' bg-red-500 rounded absolute mt-4 mx-3 hover:bg-red-200 duration-300 cursor-pointer text-white'>-40%</Badge>
-                  </div>
+                  {list.map((item, index) => {
+                      return (
+                          <div key={index} className=' w-auto bg-black h-72'>
+                              <div className="relative w-56 h-40 bg-slate-100 overflow-hidden group/item">
+                                  <Badge variant="destructive" className="bg-red-500 rounded absolute mt-4 mx-3 hover:bg-red-200 duration-300 cursor-pointer text-white">
+                                      -40%
+                                  </Badge>
+                                  <div className=' flex justify-center bg-black  my-72 items-center text-center hover:bg-slate-700 group-hover/item:my-[135px] duration-300'>
+                                      <h1 className=' text-white font-normal cursor-pointer'>{item.name}</h1>
+                                  </div>
+                              </div>
+                          </div>
+                      )
+                  }) }
               </div>
         </div>
     </div>
