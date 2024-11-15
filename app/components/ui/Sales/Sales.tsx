@@ -1,8 +1,9 @@
 import { Badge } from '@/components/ui/badge'
 import React from 'react'
-import { FaStar } from 'react-icons/fa';
+import { FaHeart, FaStar } from 'react-icons/fa';
 import image  from '../../../../assets/product-removebg-preview.png';
 import Image from 'next/image';
+import { IoEyeOutline, IoHeartOutline } from 'react-icons/io5';
 function Sales() {
     const list: unknown[] = [
         {
@@ -70,13 +71,22 @@ function Sales() {
                       return (
                           <div key={index} className=' w-auto bg-white h-72'>
                               <div className="relative w-64 h-64 bg-slate-100 overflow-hidden group/item rounded">
-                                  <Badge variant="destructive" className="bg-red-500 rounded absolute mt-4 mx-3 hover:bg-red-200 duration-300 cursor-pointer text-white">
-                                      -40%
-                                  </Badge>
-                                  <div className=' flex mx-5 my-5 rounded-2xl'>
-                                      <Image className=' absolute mx-2 h-48 my-1 rounded-full items-center size-56 object-cover' src={image} alt={'img'} />
+                                  <div className=' flex flex-row'>
+                                      <div className=' w-4'></div>
+                                      <div className=' flex flex-row items-center gap-44'>
+                                          <Badge variant="destructive" className=" bg-red-500 rounded hover:bg-red-200 duration-300 cursor-pointer  text-white">
+                                              -40%
+                                          </Badge>
+                                          <div className=' flex flex-col gap-2 '>
+                                              <IoHeartOutline className=' object-cover bg-white size-5 rounded-full' />
+                                              <IoEyeOutline className=' object-cover bg-white size-5 rounded-full' />
+                                          </div>
+                                      </div>
                                   </div>
-                                  <div className=' flex justify-center bg-black  my-72 items-center rounded text-center hover:bg-slate-700 group-hover/item:my-[210px] duration-300'>
+                                  <div className=' flex mx-4 rounded-2xl'>
+                                      <Image className=' absolute top-8 bg-black mx-2 h-48 rounded-full items-center size-56 object-cover' src={image} alt={'img'} />
+                                  </div>
+                                  <div className=' flex justify-center bg-black  my-72 items-center rounded text-center hover:bg-slate-700 group-hover/item:my-[150px] duration-300'>
                                       <h1 className=' text-white font-normal cursor-pointer'>{item.name}</h1>
                                   </div>
                               </div>
