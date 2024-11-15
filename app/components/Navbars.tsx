@@ -88,7 +88,6 @@ export default function Navbars() {
                     onClick={() => setSign(true)}>Sign Up</button>
                 </div>
                 )
-
               )
             }
           </div>
