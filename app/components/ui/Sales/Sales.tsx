@@ -69,14 +69,14 @@ function Sales() {
                   {list.map((item, index) => {
                       return (
                           <div key={index} className=' w-auto bg-white h-72'>
-                              <div className="relative w-64 h-64 bg-slate-100 overflow-hidden group/item">
+                              <div className="relative w-64 h-64 bg-slate-100 overflow-hidden group/item rounded">
                                   <Badge variant="destructive" className="bg-red-500 rounded absolute mt-4 mx-3 hover:bg-red-200 duration-300 cursor-pointer text-white">
                                       -40%
                                   </Badge>
-                                  <div className=' flex mx-5 my-5'>
-                                      <Image className=' absolute justify-center items-center size-56' src={image} alt={'img'} />
+                                  <div className=' flex mx-5 my-5 rounded-2xl'>
+                                      <Image className=' absolute mx-2 h-48 my-1 rounded-full items-center size-56 object-cover' src={image} alt={'img'} />
                                   </div>
-                                  <div className=' flex z-50 justify-center bg-black  my-72 items-center text-center hover:bg-slate-700 group-hover/item:my-[210px] duration-300'>
+                                  <div className=' flex justify-center bg-black  my-72 items-center rounded text-center hover:bg-slate-700 group-hover/item:my-[210px] duration-300'>
                                       <h1 className=' text-white font-normal cursor-pointer'>{item.name}</h1>
                                   </div>
                               </div>
