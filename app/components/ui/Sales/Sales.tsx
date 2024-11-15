@@ -71,22 +71,23 @@ function Sales() {
                       return (
                           <div key={index} className=' w-auto bg-white h-72'>
                               <div className="relative w-64 h-64 bg-slate-100 overflow-hidden group/item rounded">
-                                  <div className=' flex flex-row'>
+                                  <div className=' flex flex-row top-1 '>
                                       <div className=' w-4'></div>
-                                      <div className=' flex flex-row items-center gap-44'>
-                                          <Badge variant="destructive" className=" bg-red-500 rounded hover:bg-red-200 duration-300 cursor-pointer  text-white">
+                                      <div className=' flex flex-row items-center gap-36 h-7 justify-center mr-3'>
+                                          <Badge variant="destructive" className=" bg-red-500 rounded ml-2 mt-3 hover:bg-red-200 duration-300 cursor-pointer  text-white">
                                               -40%
                                           </Badge>
                                           <div className=' flex flex-col gap-2 '>
+                                              <div className=' h-8'></div>
                                               <IoHeartOutline className=' object-cover bg-white size-5 rounded-full' />
                                               <IoEyeOutline className=' object-cover bg-white size-5 rounded-full' />
                                           </div>
                                       </div>
                                   </div>
                                   <div className=' flex mx-4 rounded-2xl'>
-                                      <Image className=' absolute top-8 bg-black mx-2 h-48 rounded-full items-center size-56 object-cover' src={image} alt={'img'} />
+                                      <Image className=' absolute top-8 mx-2 h-48 rounded-full items-center size-56 object-cover' src={image} alt={'img'} />
                                   </div>
-                                  <div className=' flex justify-center bg-black  my-72 items-center rounded text-center hover:bg-slate-700 group-hover/item:my-[150px] duration-300'>
+                                  <div className=' flex justify-center bg-black  my-72 items-center rounded text-center hover:bg-slate-700 group-hover/item:my-[205px] duration-300'>
                                       <h1 className=' text-white font-normal cursor-pointer'>{item.name}</h1>
                                   </div>
                               </div>
