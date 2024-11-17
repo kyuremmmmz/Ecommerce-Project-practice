@@ -1,4 +1,5 @@
 import React from 'react'
+import BuyNowButton from '../Buttons/BuyNowButton'
 
 function SingleCategory() {
   return (
@@ -26,6 +27,9 @@ function SingleCategory() {
                       <h1 className=' font-bold'>35</h1>
                       <p className=' text-sm'>Seconds</p>
                   </div>
+              </div>
+              <div className=' px-10 mt-5'>
+                <BuyNowButton/>
               </div>
         </div>
     </div>
