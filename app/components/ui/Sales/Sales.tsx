@@ -1,9 +1,16 @@
+"use client";
 import { Badge } from '@/components/ui/badge'
 import React from 'react'
 import { FaHeart, FaStar } from 'react-icons/fa';
 import image  from '../../../../assets/product-removebg-preview.png';
 import Image from 'next/image';
 import { IoEyeOutline, IoHeartOutline } from 'react-icons/io5';
+import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 function Sales() {
     const list: unknown[] = [
         {
@@ -24,6 +31,19 @@ function Sales() {
         {
             name: 'Add to Cart'
         },
+        {
+            name: 'Add to Cart'
+        },
+        {
+            name: 'Add to Cart'
+        },
+        {
+            name: 'Add to Cart'
+        },
+        {
+            name: 'Add to Cart'
+        },
+
     ];
   return (
     <div className=' flex'>
@@ -66,10 +86,15 @@ function Sales() {
                       </div>
                   </div>
               </div>
-              <div className="flex flex-col md:flex-row gap-6 items-center md:items-start justify-center md:justify-start">
+              <Swiper
+                  modules={[Navigation, Pagination]}
+                  spaceBetween={50}
+                  slidesPerView={4}
+                  navigation
+                  className="flex flex-col md:flex-row gap-2 items-center md:items-start justify-center md:justify-start w-[1200px]">
                   {list.map((item, index) => {
                       return (
-                          <div key={index} className=' w-auto bg-white h-72'>
+                          <SwiperSlide key={index} className='w-auto h-72 ml-1px'>
                               <div className="relative w-64 h-64 bg-slate-100 overflow-hidden group/item rounded">
                                   <div className=' flex flex-row top-1 '>
                                       <div className=' w-4'></div>
@@ -105,10 +130,10 @@ function Sales() {
                                       <p className=' text-slate-400 '>(75)</p>
                                   </div>
                               </div>
-                          </div>
+                          </SwiperSlide>
                       )
                   }) }
-              </div>
+              </Swiper>
         </div>
     </div>
   )
