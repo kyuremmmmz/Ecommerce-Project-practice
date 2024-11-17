@@ -71,16 +71,16 @@ function BestSellingProducts() {
 
     ];
     return (
-        <div className=' flex'>
+        <div className=' flex mb-10'>
             <div className=' flex flex-col gap-3'>
                 <div className=' flex flex-row gap-2 text-center items-center'>
                     <div className=' w-4 h-12 bg-red-500 rounded'></div>
                     <h2 className=' font-semibold text-red-500'>This Month</h2>
                     <div className=' w-[1000px]'></div>
                 </div>
-                <div className="flex flex-row gap-96 items-center sticky top-32 z-50 bg-white">
+                <div className="flex flex-row gap-96 items-center z-50 bg-white">
                     <h2 className="font-semibold text-4xl">Best Selling Products</h2>
-                    <div className=' ml-64'>
+                    <div className=' ml-[275px]'>
                         <ViewAllSmall/>
                     </div>
                 </div>
