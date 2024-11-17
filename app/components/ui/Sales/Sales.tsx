@@ -12,7 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 function Sales() {
-    const list= [
+    const list = [
         {
             name: 'Add to Cart'
         },
