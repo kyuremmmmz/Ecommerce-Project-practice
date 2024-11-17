@@ -1,3 +1,4 @@
+import ButtonViewAll from "./components/ui/Buttons/ButtonViewAll";
 import  Promos  from "./components/ui/Promo/Promos";
 import Promos2 from "./components/ui/Promo/Promos2";
 import Sales from "./components/ui/Sales/Sales";
@@ -18,6 +19,7 @@ export default function Home() {
         <div className=" flex justify-center">
           <div className="">
             <Sales />
+            <ButtonViewAll/>
           </div>
         </div>
       </section>

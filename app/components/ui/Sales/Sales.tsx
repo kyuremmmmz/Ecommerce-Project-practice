@@ -43,6 +43,30 @@ function Sales() {
         {
             name: 'Add to Cart'
         },
+        {
+            name: 'Add to Cart'
+        },
+        {
+            name: 'Add to Cart'
+        },
+        {
+            name: 'Add to Cart'
+        },
+
+        {
+            name: 'Add to Cart'
+        },
+        {
+            name: 'Add to Cart'
+        },
+        {
+            name: 'Add to Cart'
+        },
+
+
+        {
+            name: 'Add to Cart'
+        },
 
     ];
   return (
@@ -134,7 +158,7 @@ function Sales() {
                       )
                   }) }
               </Swiper>
-        </div>
+          </div>
     </div>
   )
 }
