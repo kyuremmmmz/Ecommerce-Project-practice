@@ -12,7 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 function Sales() {
-    const list: unknown[] = [
+    const list= [
         {
             name: 'Add to Cart'
         },
@@ -77,7 +77,7 @@ function Sales() {
                   <h2 className=' font-semibold text-red-500'>Today&apos;s</h2>
                   <div className=' w-[1000px]'></div>
               </div>
-              <div className="flex flex-row gap-10 items-center">
+              <div className="flex flex-row gap-10 items-center sticky top-32 z-50 bg-white">
                   <h2 className="font-semibold text-4xl">Flash Sales</h2>
                   <div className=' flex flex-row gap-8'>
                       <div className="flex flex-col items-center mb-4">

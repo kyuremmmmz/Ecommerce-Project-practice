@@ -7,7 +7,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { FaCamera, FaDesktop, FaGamepad, FaHeadphones, FaMobileAlt } from 'react-icons/fa';
-import { Computer } from 'lucide-react';
 import { IoWatchSharp } from 'react-icons/io5';
 
 function Category() {
