@@ -1,7 +1,7 @@
 "use client";
 import { Badge } from '@/components/ui/badge'
 import React from 'react'
-import { FaHeart, FaStar } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 import image  from '../../../../assets/product-removebg-preview.png';
 import Image from 'next/image';
 import { IoEyeOutline, IoHeartOutline } from 'react-icons/io5';
