@@ -15,13 +15,13 @@ function Promos2() {
                     delay: 3000,
                 }),
             ]}
-            className="flex flex-row justify-center items-center h-[188px] w-[400px] bg-black overflow-hidden">
+            className=" flex flex-row justify-center items-center md:h-[188px] md:w-[400px] h-96 w-[700px]   bg-black overflow-hidden">
             <CarouselContent>
                 {
                     data.map((item) => {
                         return (
                             <CarouselItem key={item._id}>
-                                <Card className='flex justify-center items-center rounded-none h-[188px] w-[400px]  overflow-hidden'>
+                                <Card className='flex justify-center items-center rounded-none md:h-[188px] md:w-[400px] h-96 w-[700px]   overflow-hidden'>
                                     <CardContent className="relative flex items-center justify-center h-full w-full overflow-hidden">
                                         <Image
                                             className=' object-fill'

@@ -12,10 +12,10 @@ export default function Navbars() {
   const [sign, setSign] = useState(false);
   const router = useRouter()
   return (
-    <div className=" flex justify-center items-center ml-24">
+    <div className=" flex justify-start items-center w-screen  h-32 md:w-screen xl:w-screen bg-white mx-auto">
       <nav className="md:grid md:grid-cols-8 md:gap-10 md:items-center flex flex-col items-center py-4">
-        <div className="md:col-span-2 ml-30">
-          <h1 className="font-bold text-3xl text-right cursor-pointer">Exclusive</h1>
+        <div className="md:col-span-2 xl:col-span-2 ml-36">
+          <h1 className="font-bold text-2xl xl:text-3xl text-right cursor-pointer">Exclusive</h1>
         </div>
         <div className="md:col-span-2 flex justify-center space-x-8">
           <Link

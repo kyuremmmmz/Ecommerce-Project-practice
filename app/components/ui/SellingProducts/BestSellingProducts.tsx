@@ -78,7 +78,7 @@ function BestSellingProducts() {
                     <h2 className=' font-semibold text-red-500'>This Month</h2>
                     <div className=' w-[1000px]'></div>
                 </div>
-                <div className="flex flex-row gap-96 items-center z-50 bg-white">
+                <div className="flex flex-row gap-96 items-center bg-white">
                     <h2 className="font-semibold text-4xl">Best Selling Products</h2>
                     <div className=' ml-[275px]'>
                         <ViewAllSmall/>

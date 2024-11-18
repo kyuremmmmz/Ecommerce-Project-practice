@@ -33,7 +33,7 @@ function SingleCategory() {
                 <BuyNowButton/>
               </div>
           </div>
-          <div className=' flex justify-center w-[550px] h-[500px]  rounded-full my-5'>
+          <div className=' flex justify-center w-[550px] h-[500px]  rounded-full my-5 animate-in'>
               <div className='flex justify-center bg-slate-50 opacity-30 blur-xl w-[550px] h-[500px] rounded-full my-5'>
               </div>
               <div className=' absolute flex items-center justify-center my-20'>
