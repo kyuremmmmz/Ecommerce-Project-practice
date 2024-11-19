@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { redirect, usePathname } from "next/navigation";
 import { FaCartArrowDown, FaHeart } from "react-icons/fa";
 import Search from "./ui/Fields/Search";
 import { useRouter } from 'next/navigation'
@@ -83,9 +83,9 @@ export default function Navbars() {
                 :
                 (<div className=" grid grid-cols-2 gap-16">
                   <button className=" md:ml-2  text-white bg-black opacity-45 hover:bg-black hover:opacity-100 hover:text-white transition-all duration-300 w-20 rounded cursor-pointe"
-                    onClick={() => setSign(true)}>Sign In</button>
+                    onClick={() => redirect('/page/login')}>Sign In</button>
                   <button className=" md:ml-10  text-white bg-black opacity-45 hover:bg-black hover:opacity-100 hover:text-white transition-all duration-300 w-20 rounded cursor-pointe"
-                    onClick={() => setSign(true)}>Sign Up</button>
+                    onClick={() =>redirect('/page/register')}>Sign Up</button>
                 </div>
                 )
               )
