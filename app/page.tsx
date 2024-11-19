@@ -3,6 +3,7 @@ import Category from "./components/ui/Category/Category";
 import SingleCategory from "./components/ui/Category/SingleCategory";
 import  Promos  from "./components/ui/Promo/Promos";
 import Promos2 from "./components/ui/Promo/Promos2";
+import ExploreProducts from "./components/ui/Sales/ExploreProducts";
 import Sales from "./components/ui/Sales/Sales";
 import BestSellingProducts from "./components/ui/SellingProducts/BestSellingProducts";
 
@@ -35,9 +36,16 @@ export default function Home() {
       </section>
       <section className=" mx-auto w-fit gap-2 border-b-2">
         <div className=" flex justify-center">
-          <div className="">
+          <div className=" mb-16">
             <BestSellingProducts />
             <SingleCategory/>
+          </div>
+        </div>
+      </section>
+      <section className=" mx-auto w-fit gap-2">
+        <div className=" flex justify-center">
+          <div className="">
+            <ExploreProducts/>
           </div>
         </div>
       </section>

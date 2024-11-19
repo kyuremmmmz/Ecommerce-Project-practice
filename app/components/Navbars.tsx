@@ -12,7 +12,7 @@ export default function Navbars() {
   const [sign, setSign] = useState(false);
   const router = useRouter()
   return (
-    <div className=" flex justify-start items-center w-screen  h-32 md:w-screen xl:w-screen bg-white mx-auto">
+    <div className=" flex justify-start items-center w-screen  h-32 md:w-screen xl:w-screen bg-white border mx-auto ">
       <nav className="md:grid md:grid-cols-8 md:gap-10 md:items-center flex flex-col items-center py-4">
         <div className="md:col-span-2 xl:col-span-2 ml-36">
           <h1 className="font-bold text-2xl xl:text-3xl text-right cursor-pointer">Exclusive</h1>
@@ -39,8 +39,8 @@ export default function Navbars() {
             Contact
           </Link>
           <Link
-            href="/page/product/puta"
-            className={`${pathname === "/page/product/puta" ? " border-b-2 border-black" : "text-gray-500"
+            href="/page/product/pata"
+            className={`${pathname === "/page/product/pata" ? " border-b-2 border-black" : "text-gray-500"
               } relative text-black cursor-pointer transition-all duration-300 ease-in-out 
         before:absolute before:bottom-0 before:left-0 before:h-[2px]
         before:w-0 before:bg-black before:transition-all before:duration-300

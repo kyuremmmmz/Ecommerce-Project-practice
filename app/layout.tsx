@@ -53,7 +53,7 @@ export default function RootLayout({
           {children}
         </div>
         <footer className=" flex items-center align-middle bg-cyan-950 h-32 justify-center">
-          <p className="text-center text-white">All rights reserved © 2024 Cryptotality</p>
+          <p className="text-center text-white">All rights reserved © 2024 Exclusive</p>
         </footer>
       </body>
     </html>
