@@ -1,5 +1,7 @@
 'use client';
 
+import { redirect } from "next/dist/server/api-utils";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 
@@ -10,6 +12,7 @@ export function LoginData() {
     const [error, setError] = useState<string | null>('');
     const [loading, setLoading] = useState<boolean>(false);
     const [success, setSuccess] = useState<boolean>(false);
+    const router = useRouter();
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => { 
         e.preventDefault();
@@ -27,15 +30,18 @@ export function LoginData() {
             }
             );
             const data = await responseData.json();
-            console.log(data);
-
-            
-            if (!responseData.ok) {
-                throw new Error(`Failed to login: ${data}`);
+            if (responseData.ok) {
+                router.push(data.redirect);
+            } else {
+                setError('Invalid email or password');
+                throw new Error('invalid');
             }
         } catch (err) { 
+            setLoading(false);
             setError(`${err}`);
-         }
+        } finally {
+            setLoading(false);
+        }
     }
     return {email, password, setEmail, setPassword ,  setError, setLoading, setSuccess, success,error, loading, handleSubmit}
 }

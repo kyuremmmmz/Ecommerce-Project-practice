@@ -15,7 +15,7 @@ function LoginForm() {
               <Email email={ email } onChange={(e)=>setEmail(e.target.value)} />
               <Password password={password} onChange={(e)=>setPassword(e.target.value)} />
               <div className=' flex flex-row gap-20 w-full items-center'>
-                  <ButtonSignIn />
+                  <ButtonSignIn onLoading={loading} signIn={loading === true? 'Loading' : 'Sign In'} />
                   <p className=' px-3 cursor-pointer font-medium text-red-500'>Forget Password?</p>
               </div>
           </form>
