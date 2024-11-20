@@ -4,9 +4,10 @@ import Password from './ui/Fields/Password'
 import Email from './ui/Fields/Email'
 import ButtonSignIn from './ui/Buttons/ButtonSignIn'
 import { LoginData } from '../hooks/Auth/authentication'
+import Cookie from 'js-cookie';
 
 function LoginForm() {
-    const { email, password, setEmail, setPassword, setError, setLoading, setSuccess, success, error, loading, handleSubmit } = LoginData();
+    const { email, password, setEmail, setPassword, loading, handleSubmit } = LoginData();
   return (
       <div className=' flex flex-col gap-5 w-full'>
           <form method='POST' className=' flex flex-col gap-5 w-full' onSubmit={handleSubmit}>

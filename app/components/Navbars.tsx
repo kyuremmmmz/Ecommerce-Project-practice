@@ -4,12 +4,12 @@ import { redirect, usePathname } from "next/navigation";
 import { FaCartArrowDown, FaHeart } from "react-icons/fa";
 import Search from "./ui/Fields/Search";
 import { useRouter } from 'next/navigation'
-import { useState } from "react";
+import { LoginData } from "../hooks/Auth/authentication";
 
 
 export default function Navbars() {
   const pathname = usePathname();
-  const [sign, setSign] = useState(false);
+  const { handleSignOut, isLoggedIn } = LoginData();
   const router = useRouter()
   return (
     <div className=" flex justify-start items-center w-screen  h-32 md:w-screen xl:w-screen bg-white border mx-auto ">
@@ -77,9 +77,9 @@ export default function Navbars() {
             <FaHeart className="lg:flex md:ml-1 text-red-500 text-2xl cursor-pointer" onClick={() => router.push('/page/cart')} />
             <FaCartArrowDown className="lg:flex md:ml-1 text-red-500 text-2xl cursor-pointer" onClick={() => router.push('/page/blog')} />
             {
-              (sign === true ?
+              (isLoggedIn === true ?
                 (<button className=" md:ml-2  text-white bg-black opacity-45 hover:bg-black hover:opacity-100 hover:text-white transition-all duration-300 w-20 rounded cursor-pointe"
-                  onClick={() => setSign(!sign)}>Sign Out</button>)
+                  onClick={()=>handleSignOut()}>Sign Out</button>)
                 :
                 (<div className=" grid grid-cols-2 gap-16">
                   <button className=" md:ml-2  text-white bg-black opacity-45 hover:bg-black hover:opacity-100 hover:text-white transition-all duration-300 w-20 rounded cursor-pointe"
