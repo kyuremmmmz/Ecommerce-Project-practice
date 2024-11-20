@@ -4,7 +4,6 @@ import Password from './ui/Fields/Password'
 import Email from './ui/Fields/Email'
 import ButtonSignIn from './ui/Buttons/ButtonSignIn'
 import { LoginData } from '../hooks/Auth/authentication'
-import Cookie from 'js-cookie';
 
 function LoginForm() {
     const { email, password, setEmail, setPassword, loading, handleSubmit } = LoginData();

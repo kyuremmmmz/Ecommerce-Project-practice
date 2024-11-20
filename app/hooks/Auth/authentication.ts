@@ -1,6 +1,6 @@
 'use client';
 
-import { redirect, useRouter } from "next/navigation";
+import {  useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Cookie from 'js-cookie';
 
@@ -38,7 +38,7 @@ export function LoginData() {
             );
             const data = await responseData.json();
             if (responseData.ok) {
-                Cookie.set('admin', data,);
+                Cookie.set('admin', data.user,);
                 router.push(data.redirect);
                 setSuccess(true);
             } else {
