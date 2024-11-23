@@ -20,7 +20,7 @@ const AuthSlice = createSlice({
             state.user = null;
             Cookies.remove('admin');
         }
-    }
+    } 
 });
 
 export const { login, logout } = AuthSlice.actions;
