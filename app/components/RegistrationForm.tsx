@@ -14,8 +14,8 @@ function RegistrationForm() {
             <form method='POST' className=' flex flex-col gap-5 w-full' onSubmit={handleRegister}>
                 <h1 className=' font-semibold text-3xl'>Register your account to Exclusive</h1>
                 <p className=' font-medium'>Enter your details below</p>
-                <TextArea placeHolder={'Enter your First name'} value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-                <TextArea placeHolder={'Enter your Last name'} value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                <TextArea placeHolder={'Enter your First name'} value={firstName} onChange={(e) => setFirstName(e.target.value)} type={'text'} />
+                <TextArea placeHolder={'Enter your Last name'} value={lastName} onChange={(e) => setLastName(e.target.value)} type={'text'} />
                 <Email email={email} onChange={(e) => setEmail(e.target.value)} />
                 <Password password={password} onChange={(e) => setPassword(e.target.value)} />
                 <div className=' flex flex-col gap-5 w-full items-center'>

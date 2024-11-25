@@ -49,8 +49,8 @@ export default function Navbars() {
             About
           </Link>
           <Link
-            href="/page/product/puta"
-            className={`${pathname === "/page/product/puta" ? " border-b-2 border-black" : "text-gray-500"
+            href="/page/product"
+            className={`${pathname === "/page/product" ? " border-b-2 border-black" : "text-gray-500"
               } relative text-black cursor-pointer transition-all duration-300 ease-in-out 
         before:absolute before:bottom-0 before:left-0 before:h-[2px]
         before:w-0 before:bg-black before:transition-all before:duration-300
