@@ -35,7 +35,7 @@ function DataInsertionForm() {
                   <label>Product Discount: </label>
                   <TextAreaFullBorder type='number' value={discount.toString()} onChange={(e) => setDiscount(Number.parseInt(e.target.value))} />
                   <label>Product Type:</label>
-                  <DropDown value={productType} onChange={(e) => setProductType(e.target.value)}/>
+                  <DropDown value={productType} onChange={(e) => setProductType(e.target.value)} css={'border border-gray-500 w-full focus:border py-2 px-2 focus:border-black focus:outline-none outline-none duration-300'}/>
                   <label>Product Image: </label>
                   <TextAreaFullBorder type='file' name={'image'} onChange={(e) => handleImage(e)} />
                   <ButtonSignUp onLoading={false} signUp={'Submit'}/>
