@@ -12,7 +12,7 @@ export default function Navbars() {
   const { handleSignOut, isLoggedIn } = LoginData();
   const router = useRouter()
   return (
-    <div className=" flex justify-start items-center w-screen  h-32 md:w-screen xl:w-screen bg-white border mx-auto ">
+    <div className=" flex justify-start items-center   h-32 w-full bg-white border mx-auto ">
       <nav className="md:grid md:grid-cols-8 md:gap-10 md:items-center flex flex-col items-center py-4">
         <div className="md:col-span-2 xl:col-span-2 ml-36">
           <h1 className="font-bold text-2xl xl:text-3xl text-right cursor-pointer">Exclusive</h1>

@@ -22,8 +22,8 @@ function DataInsertionForm() {
             handleImage,
         } = DataCreate();
   return (
-      <div className=' flex flex-row h-screen-full'>
-          <div className=' flex flex-col px-72 '>
+      <div className=' flex flex-row h-screen'>
+          <div className=' flex flex-col '>
               <h1 className=' font-medium text-2xl py-6'>Post my Product</h1>
               <form className=' flex flex-col gap-2' method='POST' onSubmit={handleSubmit}>
                   <label>Product Name: </label>

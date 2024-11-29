@@ -1,15 +1,7 @@
 'use client';
 import useFetchProducts from '../../../hooks/state';
 import React from 'react';
-interface ListTypes {
-    _id: string;
-    productName: string;
-    discount: number;
-    description: string;
-    productType: string;
-    price: number;
-    quantity: number;
-}
+
 export default function List() {
     const { data, loading, error } = useFetchProducts();
 
@@ -21,7 +13,7 @@ export default function List() {
         <div>
             <h1>Product List</h1>
             <ul>
-                {data.map((product: ListTypes) => (
+                {data.map((product) => (
                     <li key={product._id}>
                         <h2
                             onClick={() => {
