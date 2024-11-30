@@ -9,7 +9,7 @@ import BestSellingProducts from "./components/ui/SellingProducts/BestSellingProd
 
 export default function Home() {
   return (
-    <div className="grid p-8 h-screen-full  gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className=" h-screen-full m-6  gap-16 font-[family-name:var(--font-geist-sans)]">
       <section className="border w-fit h-fit mx-auto gap-2">
           <div className="md:flex-row flex flex-col justify-center items-stretch gap-2">
               <Promos />

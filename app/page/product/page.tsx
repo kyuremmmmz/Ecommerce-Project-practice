@@ -5,7 +5,7 @@ import React from 'react'
 
 function page() {
   return (
-    <div className='grid  h-screen gap-16  font-[family-name:var(--font-geist-sans)]'>
+    <div className='flex items-center h-screen-full gap-16 w-full justify-center overflow-hidden  font-[family-name:var(--font-geist-sans)]'>
       <DataInsertionForm />
       <ListInProducts/>
     </div>

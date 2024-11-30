@@ -13,7 +13,7 @@ function DataReading() {
                 const datas = await fetch('http://localhost:3001/v2/schema');
                 const response = await datas.json();
                 if (datas.ok) {
-                    setData(response.products);
+                    setData(response.product);
                     setLoading(false);
                     setErr(false);
                 } else {
