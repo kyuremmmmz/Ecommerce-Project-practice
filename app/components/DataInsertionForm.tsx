@@ -17,6 +17,7 @@ function DataInsertionForm() {
             discount,
             setDiscount,
             productType,
+            image,
             setProductType,
             handleSubmit,
             handleImage,
@@ -37,9 +38,10 @@ function DataInsertionForm() {
                   <label>Product Type:</label>
                   <DropDown value={productType} onChange={(e) => setProductType(e.target.value)} css={'border border-gray-500 w-full focus:border py-2 px-2 focus:border-black focus:outline-none outline-none duration-300'}/>
                   <label>Product Image: </label>
-                  <TextAreaFullBorder type='file' name={'image'} onChange={(e) => handleImage(e)} />
+                  <TextAreaFullBorder type='file' accept='image/*' name={'image'} onChange={(e) => handleImage(e)} />
                   <ButtonSignUp onLoading={false} signUp={'Submit'}/>
               </form>
+              
           </div>
          
     </div>

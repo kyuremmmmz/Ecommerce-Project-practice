@@ -1,4 +1,5 @@
 import DataReading from '@/app/hooks/data/DataReading'
+import Image from 'next/image';
 import React from 'react'
 
 function ListInProducts() {
@@ -13,6 +14,12 @@ function ListInProducts() {
                             <ul>
                                 <li>Product: {products.productName}</li>
                                 <li>Price: ${products.price}</li>
+                                {products.image && products.image !== '' && (
+                    <div>
+                        <h2>Preview Image:</h2>
+                        <img src={products.image} alt="Product Preview" />
+                    </div>
+                )}
                             </ul>
                         </div>
                     )

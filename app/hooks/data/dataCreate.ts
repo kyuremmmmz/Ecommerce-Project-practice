@@ -8,13 +8,17 @@ export default function DataCreate() {
     const [description, setDescription] = useState<string | ''>('');
     const [price, setPrice] = useState<number | 0>(0);
     const [discount, setDiscount] = useState<number | 0>(0);
-    const [image, setImage] = useState<string | ''>('');
+    const [image, setImage] = useState<any | ''>('');
     const [productType, setProductType] = useState<string | ''>('');
     const [loading, setLoading] = useState<boolean>(false);
     const handleImage = async (e:React.ChangeEvent<HTMLInputElement>) => {
+        const reader = new FileReader();
         if (e.target.files && e.target.files[0]) {
-
-            setImage(e.target.files[0].name);
+            reader.readAsDataURL(e.target.files[0]);
+            reader.onload = () => {
+                console.log(reader.result);
+                setImage(reader.result);
+            }
         }
     }
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
