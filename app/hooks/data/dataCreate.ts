@@ -8,7 +8,7 @@ export default function DataCreate() {
     const [description, setDescription] = useState<string | ''>('');
     const [price, setPrice] = useState<number | 0>(0);
     const [discount, setDiscount] = useState<number | 0>(0);
-    const [image, setImage] = useState<any | ''>('');
+    const [image, setImage] = useState<unknown | ''>('');
     const [productType, setProductType] = useState<string | ''>('');
     const [loading, setLoading] = useState<boolean>(false);
     const handleImage = async (e:React.ChangeEvent<HTMLInputElement>) => {
