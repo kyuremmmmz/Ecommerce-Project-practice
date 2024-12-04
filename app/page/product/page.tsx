@@ -6,8 +6,12 @@ import React from 'react'
 function page() {
   return (
     <div className='flex items-center h-screen-full gap-96 w-full justify-center overflow-hidden  font-[family-name:var(--font-geist-sans)]'>
-      <DataInsertionForm />
-      <ListInProducts/>
+      <div>
+        <DataInsertionForm />
+      </div>
+      <div className=''>
+        <ListInProducts />
+      </div>
     </div>
   )
 }
