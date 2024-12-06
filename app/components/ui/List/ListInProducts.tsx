@@ -1,9 +1,12 @@
 import DataReading from '@/app/hooks/data/DataReading';
+import DeleteData from '@/app/hooks/data/DeleteData';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import React from 'react';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 
 function ListInProducts() {
     const { data } = DataReading();
+    const { handleDelete } = DeleteData();
     return (
         <div className="flex flex-row">
             <div className="flex flex-col bg-slate-200  rounded-lg shadow-lg max-h-[700px] overflow-y-auto overflow-x-hidden">
@@ -39,7 +42,14 @@ function ListInProducts() {
                             <p className="text-sm font-medium text-gray-500 ">${product.price}</p>
                         </div>
                         <div className=' flex flex-row mr-5 gap-6'>
-                            <FaTrash color='red' className=' cursor-pointer' />
+                            <TooltipProvider>
+                                <Tooltip>
+                                    <TooltipTrigger><FaTrash onClick={()=>handleDelete(product._id)} color='red'/></TooltipTrigger>
+                                    <TooltipContent className=' bg-black'>
+                                        <p className=' text-white'>Delete Product</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                            </TooltipProvider>
                             <FaEdit/>
                         </div>
                         
