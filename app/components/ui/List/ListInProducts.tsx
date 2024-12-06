@@ -1,11 +1,12 @@
 import DataReading from '@/app/hooks/data/DataReading';
 import React from 'react';
+import { FaEdit, FaTrash } from 'react-icons/fa';
 
 function ListInProducts() {
     const { data } = DataReading();
     return (
         <div className="flex flex-row">
-            <div className="flex flex-col bg-slate-200 w-80 rounded-lg shadow-lg max-h-[700px] overflow-y-auto overflow-x-hidden">
+            <div className="flex flex-col bg-slate-200  rounded-lg shadow-lg max-h-[700px] overflow-y-auto overflow-x-hidden">
                 <div className='sticky top-0 bg-white w-full'>
                     <div className="flex flex-row gap-4 sticky top-0 w-full">
                         <h1 className="text-2xl font-medium text-black">Popular Products</h1>
@@ -13,6 +14,7 @@ function ListInProducts() {
                     <div className="flex flex-row w-full sticky top-12 justify-evenly gap-24 mt-4">
                         <h2 className="text-black font-semibold">Product</h2>
                         <h2 className="text-black font-semibold">Earnings</h2>
+                        <h2 className="text-black font-semibold">Actions</h2>
                     </div>
                 </div>
                 {data.map((product) => (
@@ -33,8 +35,12 @@ function ListInProducts() {
                                 <p className="text-sm font-medium text-gray-500">{product.productType}</p>
                                 </div>
                         </div>
-                        <div>
-                            <p className="text-sm font-medium text-gray-500">${product.price}</p>
+                        <div className=' mr-10'>
+                            <p className="text-sm font-medium text-gray-500 ">${product.price}</p>
+                        </div>
+                        <div className=' flex flex-row mr-5 gap-6'>
+                            <FaTrash color='red' className=' cursor-pointer' />
+                            <FaEdit/>
                         </div>
                         
                     </div>
