@@ -1,12 +1,10 @@
 import DataReading from '@/app/hooks/data/DataReading';
 import DeleteData from '@/app/hooks/data/DeleteData';
-import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import React from 'react';
 import { FaEdit, FaTrash } from 'react-icons/fa';
+import DataUpdateForm from '../../DataUpdateForm';
 
 function ListInProducts() {
     const { data } = DataReading();
@@ -31,7 +29,7 @@ function ListInProducts() {
                     >
                         <div className=' flex flex-row gap-2 justify-between'>
                             {product.image ? (
-                                <img src={product.image} alt={product.productName} width={50} height={50}></img>
+                                <img src={product.image} alt={product.productName} width={50} height={50}/>
                             ) : (
                                 <div className=" bg-gray-300 flex items-center justify-center">
                                     No Image
@@ -56,39 +54,20 @@ function ListInProducts() {
                             </TooltipProvider>
                             <Dialog>
                                 <DialogTrigger asChild>
-                                    <Button variant="outline">Edit Profile</Button>
+                                    <FaEdit className=' cursor-pointer'/>
                                 </DialogTrigger>
-                                <DialogContent className="sm:max-w-[425px]">
+                                <DialogContent className="">
                                     <DialogHeader>
-                                        <DialogTitle>Edit profile</DialogTitle>
-                                        <DialogDescription>
-                                            Make changes to your profile here. Click save when you&apos;re done.
+                                        <DialogTitle className=' text-white'>Edit Product</DialogTitle>
+                                        <DialogDescription className=' text-white'>
+                                            Make changes to your product here. Click save when you&apos;re done.
                                         </DialogDescription>
                                     </DialogHeader>
-                                    <div className="grid gap-4 py-4">
-                                        <div className="grid grid-cols-4 items-center gap-4">
-                                            <Label htmlFor="name" className="text-right">
-                                                Name
-                                            </Label>
-                                            <Input
-                                                id="name"
-                                                defaultValue="Pedro Duarte"
-                                                className="col-span-3"
-                                            />
-                                        </div>
-                                        <div className="grid grid-cols-4 items-center gap-4">
-                                            <Label htmlFor="username" className="text-right">
-                                                Username
-                                            </Label>
-                                            <Input
-                                                id="username"
-                                                defaultValue="@peduarte"
-                                                className="col-span-3"
-                                            />
-                                        </div>
+                                    <div className="grid gap-4 py-4 bg-white ">
+                                        <DataUpdateForm/>
                                     </div>
                                     <DialogFooter>
-                                        <Button type="submit">Save changes</Button>
+                                        
                                     </DialogFooter>
                                 </DialogContent>
                             </Dialog>
