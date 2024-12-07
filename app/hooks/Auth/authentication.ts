@@ -3,6 +3,7 @@
 import {  useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Cookie from 'js-cookie';
+import { io } from "socket.io-client";
 
 
 export function LoginData() {
@@ -15,10 +16,19 @@ export function LoginData() {
     const router = useRouter();
 
     useEffect(() => {
-        setIsLoggedIn(!!Cookie.get("admin"));
+        const socket = io('http://localhost:3002')
+        socket.on('login', (email: string) => {
+            console.log('Logged in user email:', email);
+            setIsLoggedIn(!!Cookie.get('user'));
+            setIsLoggedIn(!!Cookie.get('user2'));
+        })
+        return () => {
+            socket.disconnect();
+        }
     }, [])
     const handleSignOut = async () => {
-        Cookie.remove('admin')
+        Cookie.remove('user');
+        Cookie.remove('user2')
         setIsLoggedIn(false);
         router.push('/page/login');
     }
@@ -38,7 +48,9 @@ export function LoginData() {
             );
             const data = await responseData.json();
             if (responseData.ok) {
-                Cookie.set('admin', data.user,);
+                Cookie.set('user', data.user,);
+                Cookie.set('user2', data.user,);
+                setIsLoggedIn(true);
                 router.push(data.redirect);
                 setSuccess(true);
             } else {

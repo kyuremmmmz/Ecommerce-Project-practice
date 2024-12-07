@@ -10,7 +10,7 @@ function DataReading() {
     
     
     useEffect(() => {
-        const socket = io('http://localhost:3002');;
+        const socket = io('http://localhost:3002');
         const handleFetch = async () => {
             try {
                 const datas = await fetch('http://localhost:3001/v2/schema');
