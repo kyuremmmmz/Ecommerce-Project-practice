@@ -64,7 +64,7 @@ function ListInProducts() {
                                         </DialogDescription>
                                     </DialogHeader>
                                     <div className="grid gap-4 py-4 bg-white ">
-                                        <DataUpdateForm/>
+                                        <DataUpdateForm product={product} />
                                     </div>
                                     <DialogFooter>
                                         

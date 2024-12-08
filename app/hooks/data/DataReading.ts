@@ -35,6 +35,14 @@ function DataReading() {
         socket.on('create', (savedData: DataReadings) => {
             setData(prevProducts => [...prevProducts, savedData]);
         })
+        socket.on('product_update', (product: DataReadings) => {
+            setData((prevData) =>
+                prevData.map((item) =>
+                    item._id === product._id ? product : item
+                )
+            );
+        });
+
         return () => {
             socket.off();
         }

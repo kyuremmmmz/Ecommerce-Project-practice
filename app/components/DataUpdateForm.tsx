@@ -1,11 +1,12 @@
 import React from 'react';
 import TextAreaFullBorder from './ui/Fields/TextAreaFullBorder';
 import TextAreaWide from './ui/Fields/TextAreaWide';
-import DataCreate from '../hooks/data/dataCreate';
 import ButtonSignUp from './ui/Buttons/ButtonSignUp';
 import DropDown from './ui/Dropdowns/DropDown';
+import UpdateData from '../hooks/data/UpdateData';
+import { DataReadings } from '../type/DataReadings';
 
-function DataUpdateForm() {
+function DataUpdateForm({product}: {product: DataReadings} ) {
     const {
         name,
         setName,
@@ -17,14 +18,25 @@ function DataUpdateForm() {
         setDiscount,
         productType,
         setProductType,
-        handleSubmit,
+        handleUpdate,
         handleImage,
-    } = DataCreate();
+    } = UpdateData();
+    React.useEffect(() => {
+        if (product) {
+            setName(product.productName);
+            setDescription(product.description);
+            setPrice(product.price);
+            setDiscount(product.discount);
+            setProductType(product.productType);
+        }
+    }, [product])
 
     return (
         <div className="flex flex-row">
             <div className="flex flex-col p-6 rounded-lg shadow-lg">
-                <form className="flex flex-col gap-4" method="PUT" onSubmit={handleSubmit}>
+                <form className="flex flex-col gap-4" method="PUT" onSubmit={(e) => {
+                    handleUpdate(e, product._id);
+                }}>
                     <label>Product Name:</label>
                     <TextAreaFullBorder
                         type="text"

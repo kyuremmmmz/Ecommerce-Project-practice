@@ -7,3 +7,7 @@ export type DataReadings = {
     price: number;
     image: string;
 }
+
+export type ID = {
+    _id: string;
+}
