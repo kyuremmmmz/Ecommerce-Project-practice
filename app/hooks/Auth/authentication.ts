@@ -13,6 +13,7 @@ export function LoginData() {
     const [loading, setLoading] = useState<boolean>(false);
     const [success, setSuccess] = useState<boolean>(false);
     const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+    const [isVisible, setIsVisible] = useState<boolean>(false);
     const router = useRouter();
 
     useEffect(() => {
@@ -32,6 +33,10 @@ export function LoginData() {
         setIsLoggedIn(false);
         router.push('/page/login');
     }
+    const handleVisibility = () => {
+        setIsVisible(!isVisible);
+    }
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => { 
         e.preventDefault();
         setLoading(true);
@@ -78,7 +83,9 @@ export function LoginData() {
         handleSubmit,
         isLoggedIn,
         setIsLoggedIn,
-        handleSignOut
+        handleSignOut,
+        handleVisibility,
+        isVisible
     }
 }
 

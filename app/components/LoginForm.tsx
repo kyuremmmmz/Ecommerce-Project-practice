@@ -6,7 +6,7 @@ import ButtonSignIn from './ui/Buttons/ButtonSignIn'
 import { LoginData } from '../hooks/Auth/authentication'
 
 function LoginForm() {
-    const { email, password, setEmail, setPassword, loading, handleSubmit } = LoginData();
+    const { email, password, setEmail, setPassword, loading, handleSubmit, isVisible } = LoginData();
   return (
       <div className=' flex flex-col gap-5 w-full'>
           <form method='POST' className=' flex flex-col gap-5 w-full' onSubmit={handleSubmit}>
@@ -15,7 +15,7 @@ function LoginForm() {
               <Email email={ email } onChange={(e)=>setEmail(e.target.value)} />
               <Password password={password} onChange={(e)=>setPassword(e.target.value)} />
               <div className=' flex flex-row gap-20 w-full items-center'>
-                  <ButtonSignIn onLoading={loading} signIn={loading === true? 'Loading' : 'Sign In'} />
+              <ButtonSignIn onLoading={loading} signIn={loading === true ? 'Loading' : 'Sign In'} css={'bg-red-500 text-white w-36 rounded  h-12 hover:bg-red-600 duration-300'} />
                   <p className=' px-3 cursor-pointer font-medium text-red-500'>Forget Password?</p>
               </div>
           </form>

@@ -11,3 +11,8 @@ export type DataReadings = {
 export type ID = {
     _id: string;
 }
+
+export type Value = {
+    password: string,
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+}
