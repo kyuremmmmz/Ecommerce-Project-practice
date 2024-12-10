@@ -12,6 +12,7 @@ export function LoginData() {
     const [error, setError] = useState<string | null>('');
     const [loading, setLoading] = useState<boolean>(false);
     const [success, setSuccess] = useState<boolean>(false);
+    const [hasErr, setHasErr] = useState<boolean>(false);
     const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
     const [isVisible, setIsVisible] = useState<boolean>(false);
     const router = useRouter();
@@ -59,14 +60,17 @@ export function LoginData() {
                 router.push(data.redirect);
                 setSuccess(true);
             } else {
-                setError('Invalid email or password');
-                throw new Error('invalid');
+                setError(data.message);
+                setHasErr(!!hasErr);
+                throw new Error(data.message);
             }
         } catch (err) { 
             setLoading(false);
+            setHasErr(true);
             setError(`${err}`);
         } finally {
             setLoading(false);
+            setHasErr(false);
         }
     }
     return {
@@ -82,6 +86,7 @@ export function LoginData() {
         loading,
         handleSubmit,
         isLoggedIn,
+        hasErr,
         setIsLoggedIn,
         handleSignOut,
         handleVisibility,

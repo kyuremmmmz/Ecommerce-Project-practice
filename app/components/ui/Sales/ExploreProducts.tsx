@@ -88,10 +88,7 @@ function ExploreProducts() {
                                         <div className=' flex flex-row top-1 '>
                                             <div className=' w-4'></div>
                                             <div className=' flex flex-row items-center gap-36 h-7 justify-center mr-3'>
-                                                <Badge variant="destructive" className=" bg-red-500 rounded ml-2 mt-3 hover:bg-red-200 duration-300 cursor-pointer  text-white">
-                                                    -40%
-                                                </Badge>
-                                                <div className=' flex flex-col gap-2 '>
+                                                <div className=' flex flex-col gap-2 mx-56'>
                                                     <div className=' h-8'></div>
                                                     <IoHeartOutline className=' object-cover bg-white size-5 rounded-full' />
                                                     <IoEyeOutline className=' object-cover bg-white size-5 rounded-full' />
@@ -107,8 +104,8 @@ function ExploreProducts() {
                                     </div>
                                     <div>
                                         <h1 className=' font-medium'>HAVIT HV-G92 Gamepad</h1>
-                                        <p className=' text-red-400 font-medium'>$120</p>
                                         <div className=' flex flex-row gap-3'>
+                                            <p className=' text-red-400 font-medium'>$120</p>
                                             <div className='flex flex-row'>
                                                 <FaStar color='orange' />
                                                 <FaStar color='orange' />
@@ -123,10 +120,7 @@ function ExploreProducts() {
                                         <div className=' flex flex-row top-1 '>
                                             <div className=' w-4'></div>
                                             <div className=' flex flex-row items-center gap-36 h-7 justify-center mr-3'>
-                                                <Badge variant="destructive" className=" bg-red-500 rounded ml-2 mt-3 hover:bg-red-200 duration-300 cursor-pointer  text-white">
-                                                    -40%
-                                                </Badge>
-                                                <div className=' flex flex-col gap-2 '>
+                                                <div className=' flex flex-col gap-2  mx-56'>
                                                     <div className=' h-8'></div>
                                                     <IoHeartOutline className=' object-cover bg-white size-5 rounded-full' />
                                                     <IoEyeOutline className=' object-cover bg-white size-5 rounded-full' />
@@ -142,8 +136,8 @@ function ExploreProducts() {
                                     </div>
                                     <div>
                                         <h1 className=' font-medium'>HAVIT HV-G92 Gamepad</h1>
-                                        <p className=' text-red-400 font-medium'>$120</p>
                                         <div className=' flex flex-row gap-3'>
+                                            <p className=' text-red-400 font-medium'>$120</p>
                                             <div className='flex flex-row'>
                                                 <FaStar color='orange' />
                                                 <FaStar color='orange' />
