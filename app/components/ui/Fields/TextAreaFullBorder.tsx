@@ -4,13 +4,14 @@ type FieldsTypes = {
     value?: string,
     type?: string,
     name?: string,
-    accept? : string
+    accept?: string,
+    required?: boolean,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
 }
-function TextAreaFullBorder({  value, onChange, type, name, accept }: FieldsTypes) {
+function TextAreaFullBorder({  value, onChange, type, name, accept, required }: FieldsTypes) {
     return (
         <div>
-            <input type={type} value={value} onChange={onChange} accept={accept} name={name} required className='border border-gray-500 w-full focus:border py-2 px-2 focus:border-black focus:outline-none outline-none duration-300'></input>
+            <input type={type} value={value} onChange={onChange} accept={accept} name={name} required={required} className='border border-gray-500 w-full focus:border py-2 px-2 focus:border-black focus:outline-none outline-none duration-300'></input>
         </div>
     )
 }
