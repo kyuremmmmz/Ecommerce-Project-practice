@@ -1,14 +1,11 @@
-import React from 'react'
-import Steps from './ui/Progress/Steps'
-import TextArea from './ui/Fields/TextArea'
-import TextAreaFullBorder from './ui/Fields/TextAreaFullBorder'
 import CheckBox from './ui/CheckBox/CheckBox'
-import ButtonSignIn from './ui/Buttons/ButtonSignIn'
+import TextAreaFullBorder from './ui/Fields/TextAreaFullBorder'
+import BillingTable from './ui/Table/BillingTable'
 
 function BillingForm() {
   return (
-    <div className=' mx-80'>
-      <form method='POST' className=' flex flex-row gap-5 w-[400px] mb-5'>
+    <div className=' xl:mx-80 sm:mx-0 flex flex-row gap-96'>
+      <form method='POST' className=' flex gap-5 w-[400px] mb-5'>
         <div className=' flex flex-col gap-2'>
           <h1 className=' text-3xl'>Billing Details</h1>
           <label className=' text-slate-500'>First Name</label>
@@ -27,9 +24,11 @@ function BillingForm() {
           <TextAreaFullBorder type='email' required={true} onChange={(e) => e.target.value} />
           <CheckBox />
         </div>
-        
       </form>
-    </div>
+      <div className='flex flex-col gap-5 w-[400px]'>
+        <BillingTable />
+      </div>
+      </div>
   )
 }
 
